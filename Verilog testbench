@@ -1,0 +1,29 @@
+module traffic_light_controller_tb;
+reg clk,rst;
+wire [2:0]light_Main1;
+wire [2:0]light_Side;
+wire [2:0]light_Main_turn;
+wire [2:0]light_Main2;
+wire [2:0]ps;
+wire [3:0]count;
+traffic_light_controller dut(.clk(clk) , .rst(rst) , .light_Main1(light_Main1) , 
+.light_Side(light_Side)  ,.light_Main2(light_Main2),.light_Main_turn(light_Main_turn)
+,.ps(ps) ,.count(count)   );
+initial
+begin
+    clk=1'b0;
+    forever #(10/2) clk=~clk;
+end
+//    initial
+//    $stop;//to add ps
+initial
+begin
+   
+    rst=1;
+    #10;
+    rst=0;
+    #(1000*200);
+    $finish;
+    end
+    
+ endmodule

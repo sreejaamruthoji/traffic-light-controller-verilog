@@ -37,9 +37,15 @@ Each traffic signal uses 3-bit representation:
 ## Files Included
 
 - `traffic_light_controller.v` – RTL design  
-- `traffic_light_controller_tb.v` – Testbench  
+- `traffic_light_controller_tb.v` – Testbench
+- design 
+- results
 
 ---
+
+## Tools Used
+
+- xilinx Vivado
 
 ## Description
 
